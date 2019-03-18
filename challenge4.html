@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 500px;
+        height: 500px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+
+    // I used Two functions here.  Starter idea at: 
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+
+    function upDate(previewPic){ /* referring to "this" down below */
+        /* In this function you should 
+        1) change the url for the background image of the div with the id = "image" 
+        to the source file of the preview image
+        
+        2) Change the text  of the div with the id = "image" 
+        to the alt text of the preview image 
+        */
+        console.log("this is a good sign - upDate");
+        var mainPic = document.getElementById("image");
+        var imgSrc = previewPic.src;
+        var altTxt = previewPic.alt;
+        mainPic.style.backgroundImage = `url("${imgSrc}")`;
+        mainPic.innerHTML = altTxt;
+	    }
+
+	function unDo(){
+        /* In this function you should 
+        1) Update the url for the background image of the div with the id = "image" 
+        back to the orginal-image.  You can use the css code to see what that original URL was
+        2) Change the text  of the div with the id = "image" 
+        back to the original text.  You can use the html code to see what that original text was
+        */
+        console.log("this is a good sign - unDo");
+        var mainPic = document.getElementById("image");
+        mainPic.style.backgroundImage = "";
+        mainPic.innerHTML = "Hover or tab over/into an image below."
+        }
+        
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" 
+            alt = "two cats on a roof" 
+            src = "https://66.media.tumblr.com/d25bfa4bbbcbef1f1dbdf9f93cbf109e/tumblr_pgegrm0lsD1rcn9rk_500.jpg" 
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()";>
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" 
+            alt = "two weasels in the sun" 
+            src = "https://66.media.tumblr.com/03bcef18ebbb9e30a947afcad3210c23/tumblr_pczqleJ5pr1ro4v2no1_500.jpg"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()";>
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "https://66.media.tumblr.com/80d803777f13b392c66768d1f8a19a51/tumblr_pg1xxsSNFT1vnoon8o1_500.jpg" 
+            alt = "shadow of two cats in a window"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()";>
+
+
+        <img class = "preview" tabindex = "1" 
+            src = "https://66.media.tumblr.com/048944bd52e2206423c2dfacf04fc11e/tumblr_pdlj5zsZA31udmrgco1_500.jpg" 
+            alt = "two cats looking into a shop window"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()";>
+
+        <img class = "preview" tabindex = "1" 
+            src = "https://66.media.tumblr.com/60003a38dd69618b5dcb8dcdb9196d46/tumblr_nn9y9uwvRf1qixslso1_500.jpg" 
+            alt = "reluctant dogs on leashes"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()";>
+
+        <img class = "preview" tabindex = "1" 
+            src = "https://66.media.tumblr.com/4b73a5900c063b2a8efb6dd31b7da99e/tumblr_pa1b57aMVh1wnxhxwo1_500.jpg" 
+            alt = "one shiba inu perched on top of another"
+            onmouseover = "upDate(this)" 
+            onmouseleave = "unDo()";>
+</body>
+</html>
+    
