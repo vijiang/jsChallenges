@@ -20,26 +20,25 @@
       var addrError = document.getElementById("addressError");
       var validName = false;
       var validAddr = false;
-      if (!document.getElementById("name").value)
+      if (!document.getElementById("name").value);
       {
-        nameError.style.display="block"
+        nameError.style.display="block";
       }
       else {
-        validName = true
+        validName = true;
+        nameError.style.display="none";
       }
-      
-      if (!document.getElementById("addr").value)
+      if (!document.getElementById("addr").value);
       {
-        addrError.style.display="block"
+        addrError.style.display="block";
       }
       else{
-        validAddr = true 
+        validAddr = true; 
+        addrError.style.display="none"
       }
-
-      if (!validName || !validAddr){
-        return false
+      if (!validName || !validAddr) {
+        return false;
       }
-
       // document.getElementById("nameError")
       
       // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
